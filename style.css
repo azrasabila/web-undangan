@@ -23,8 +23,24 @@ body {
     background-color: #FFE4C4;
 }
 
+.video {
+    max-width: 640px;
+    max-height: 480px;
+}
+
 .content {
     padding-top: 55px;
+}
+
+.pesan {
+    margin-top: 2rem;
+    max-height: 25rem;
+    overflow-y: scroll;
+}
+
+.card {
+    background-color: #FFE4C4;
+    margin-bottom: 1rem;
 }
 
 nav {

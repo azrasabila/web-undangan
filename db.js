@@ -5,8 +5,8 @@ const supabased = supabase.createClient(supabaseUrl, SUPABASE_KEY)
 const nama = document.getElementById('floatingInput')
 const form = document.forms['submit-pesan']
 const pesan = document.getElementById('floatingTextarea')
-//const konfirmasi = document.getElementById('selectKehadiran')
-//const jumlah = document.getElementById('selectJumlahTamu')
+const konfirmasi = document.getElementById('selectKehadiran')
+const jumlah = document.getElementById('selectJumlahTamu')
 const btnKirim = document.querySelector('.btn-kirim')
 const btnLoading = document.querySelector('.btn-loading')
 const alertBerhasil = document.querySelector('.alert-berhasil')
@@ -21,8 +21,8 @@ form.addEventListener('submit', e => {
           .insert([
             { Nama: nama.value, 
                 Pesan: pesan.value, 
-                //Konfirmasi: konfirmasi.value, 
-                //Jumlah: konfirmasi.value == "Hadir" ? jumlah.value : 0 
+                Konfirmasi: konfirmasi.value, 
+                Jumlah: konfirmasi.value == "Hadir" ? jumlah.value : 0 
             }
         ]).then(response => {
             console.log('Success!')

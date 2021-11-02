@@ -16,13 +16,6 @@ function toggleMuteAudio(){
 $(document).ready(function () {
     //popup nama
     $('#memberModal').modal('show');
-    //carousel
-    $('#carousel').slick({
-        infinite: true,
-        //slidesToShow: 1,
-        //slidesToScroll: 1
-    });
-
 });
 
 function GetURLParameter(sParam) {
@@ -30,8 +23,9 @@ function GetURLParameter(sParam) {
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++)  {
         var sParameterName = sURLVariables[i].split('=');
+        sParameterName = sParameterName.replace("+"," ");
         if (sParameterName[0] == sParam) {
-            return sParameterName[1].replace("+"," ");
+            return sParameterName[1];
         }
     }
 }
@@ -54,10 +48,13 @@ async function loadData() {
 
         let contents = ''
         Ucapan.forEach(function(item){
-            contents += `<div>
-                            <h1>${item.Nama}</h1>
-                            <p>${item.Pesan}</p>
-                        </div>` 
+            contents += `
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <p class="card-text">${item.Pesan}</p>
+                    <p class="card-text">- <i>${item.Nama}</i></p>
+                </div>
+            </div>` 
         })
 
         parent.insertAdjacentHTML('beforeend', contents)

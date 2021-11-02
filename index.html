@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Khaza Rifa Wedding</title>
+</head>
+
+<!-- Modal -->
+<div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3>Khaza Rifa Wedding</h3>
+                <h5>Hai, <b id="diundang"></b> kamu telah diundang</h5>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+    <audio id="bgm" hidden autoplay loop>
+        <source src="static/sound/FKJ - Ylang Ylang.mp3" type="audio/mpeg">
+        Browsermu tidak mendukung tag audio
+    </audio>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container-fluid" style="padding: 0 10px;">
+                <a class="navbar-brand" href="#">Khaza Rifa Wedding</a>
+                <a class="btn btn-link" onclick="toggleMuteAudio()"><img id="toggleMusik"
+                        src="static/img/icon/speaker-filled-audio-tool.png" width="20"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
+                        <li class="nav-item"><a href="#header" class="nav-link active" aria-current="page">Beranda</a>
+                        </li>
+                        <li class="nav-item"><a href="#mempelai" class="nav-link">Mempelai</a></li>
+                        <li class="nav-item"><a href="#waktuDanTempat" class="nav-link">Waktu & Tempat</a></li>
+                        <li class="nav-item"><a href="#galeri" class="nav-link">Galeri</a></li>
+                        <li class="nav-item"><a href="#reservasi" class="nav-link">Reservasi</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="content container-fluid">
+        <div class="pink">
+            <section class="py-5 text-center align-middle container-fluid landing jumbotron" id="header">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="header-text">Undangan Pernikahan</h1>
+                    <h5 class="">Khaza & Rifa</h5>
+                    <!-- <p>
+                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                </p> -->
+                </div>
+            </section>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="0.5"
+                d="M0,96L60,122.7C120,149,240,203,360,192C480,181,600,107,720,101.3C840,96,960,160,1080,154.7C1200,149,1320,75,1380,37.3L1440,0L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+            </path>
+        </svg> -->
+        <section class="py-5 text-center align-middle midd container scrollable-half">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Bismillahirrahmanirrahim</h1>
+                    <img src="static/img/art/Asset 1.svg" style="margin: 1rem;" width="50%">
+                    <p class="lead text-muted">“Dan diantara tanda-tanda kekuasaan-Nya ialah diciptakan Nya untukmu
+                        pasangan
+                        hidup dari jenismu sendiri supaya kamu mendapat ketenangan hati dan dijadikan-Nya kasih sayang
+                        diantara kamu. Sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang
+                        yang
+                        berfikir.”
+                        (Ar-Rum: 21)</p>
+                    <!-- <p>
+                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                </p> -->
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center align-middle container scrollable-half" id="mempelai">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <p class="lead text-muted">Untuk mengikuti Sunnah Rasul-Mu dalam rangka membentuk keluarga yang
+                        sakinah,
+                        mawaddah,& warahmah.
+                        Maka ijinkanlah kami menikahkannya. </p>
+                    <h1 class="fw-light">Khaza Allaya Rizqika, S.T.</h1>
+                    <p class="lead text-muted">Putri Bapak H. Sugeng Harijadi, S.H. dan Ibu Hj. Yuyun Tresnaningsih</p>
+                    <h1 class="">&</h1>
+                    <h1 class="fw-light">Rifa Dyanda, S.T.</h1>
+                    <p class="lead text-muted">Putra Bapak Drs. Herry Hudrasyah, M.Arts. dan Ibu Ir. Irma Fatima, S.T.,
+                        M.Eng.</p>
+                    <!-- <p>
+                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                </p> -->
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center align-middle container scrollable-half" id="waktuDanTempat">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Waktu dan Tempat</h1>
+                    <p class="lead">Waktu : 5 Desember 2021</p>
+                    <p>
+                        <span id="waktu" class="badge bg-danger"></span>
+                        <span id="jam" class="badge bg-danger"></span>
+                        <span id="menit" class="badge bg-danger"></span>
+                        <span id="detik" class="badge bg-danger"></span>
+                    </p>
+                    <p class="lead">Tempat : Wisma Joglo - Jl. Raya Resor No. 19, Dago Resor Pakar, Jl. Raya Resort,
+                        Ciburial, Kec. Cimenyan, Bandung, Jawa Barat 40198, Indonesia</p>
+                    <div style="max-width:100%;overflow:hidden;height:300px;">
+                        <div id="embedmap-display" style="height:100%; width:100%;max-width:100%;"><iframe
+                                style="height:100%;width:100%;border:0;" frameborder="0"
+                                src="https://www.google.com/maps/embed/v1/place?q=wisma+joglo+bandung&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
+                    </div>
+                    <!-- <p>
+                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                </p> -->
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center align-middle container scrollable-half" id="galeri">
+            <div class="album row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto container">
+                    <h1 class="fw-light">Galeri</h1>
+                    <img src="static/img/art/Asset 1.svg" style="margin: 1rem;" width="50%">
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01306.JPG">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01568.JPG">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01310.JPG">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01402.JPG">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01868.JPG">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01507.JPG">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01979.JPG">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS02126.JPG">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="static/img/prewed/HWS01970.JPG">
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div class="col-lg-6 col-md-8 mx-auto container">
+                    <h1 class="fw-light">Video</h1>
+                    <img src="static/img/art/Asset 1.svg" style="margin: 1rem;" width="50%">
+                </div>
+                <iframe src="https://drive.google.com/file/d/1qfFI7dryBrHFpHq6RYz6TNEVE1kcZKYc/preview" width="640"
+                    height="480" allow="autoplay"></iframe>
+            </div>
+        </section>
+        <section class="py-5 text-center align-middle container scrollable-half" id="reservasi">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Kirim Pesan</h1>
+                    <img src="static/img/art/Asset 1.svg" style="margin: 1rem;" width="50%">
+                    <!-- <p class="lead text-muted">Khaza & Rifa</p> -->
+                    <div class="alert-berhasil alert-warning alert-dismissible fade show d-none" role="alert">
+                        <strong>Terimakasih atas pesan nya!</strong> Semoga menjadi motivasi buat kami
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert-gagal alert-light alert-dismissible fade show d-none" role="alert">
+                        <strong>Terimakasih atas pesan nya!</strong> Semoga menjadi motivasi buat kami
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form name="submit-pesan" class="form">
+                        <div class="form-floating mb-3">
+                            <input type="nama" class="form-control" id="floatingInput" aria-describedby="namaHelp"
+                                name="nama" placeholder="nama">
+                            <label for="floatingInput">Nama</label>
+                            <div id="namaHelp" class="form-text">Tidak diperbolehkan menggunakan nama samaran atau
+                                anonim.
+                            </div>
+                        </div>
+                        <!-- <div class="form-floating mb-3">
+                            <select class="form-select" aria-label="Default select example" id="selectKehadiran">
+                                <option selected value="Hadir">Hadir</option>
+                                <option value="Tidak Hadir">Tidak Hadir</option>
+                            </select>
+                            <label for="floatingInput">Konfirmasi Kehadiran</label>
+                            <div id="jumlahHelp" class="form-text">Mau dateng gak
+                            </div>
+                        </div> -->
+                        <!-- <div class="form-floating mb-3">
+                            <select class="form-select" aria-label="Default select example" id="selectJumlahTamu">
+                                <option selected value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=0>0</option>
+                            </select>
+                            <label for="floatingInput">Jumlah Hadir</label>
+                            <div id="jumlahHelp" class="form-text">Pilih jumlah tamu yang akan hadir
+                            </div>
+                        </div> -->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="floatingTextarea" aria-describedby="pesanHelp"
+                                name="pesan" placeholder="isi pesan" style="height: 100px"></textarea>
+                            <label for="floatingTextarea">Pesan</label>
+                            <div id="pesanHelp" class="form-text">Tulis pesan dan doa untuk mempelai.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
+                        <button class="btn btn-loading btn-primary d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Mengirim...
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center align-middle container scrollable-half">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h3>Protokol Kesehatan</h3>
+                    <img src="static/img/art/Asset 1.svg" style="margin: 1rem;" width="50%">
+                    <h6>Dengan tidak mengurangi rasa hormat. Sehubungan dengan adanya wabah Covid-19, dimohon untuk
+                        seluruh
+                        tamu undangan agar melakukan pengecekan suhu sebelum memasuki area acara, selalu menggunakan
+                        masker,
+                        menjaga kebersihan tangan dan menjaga jarak aman selama acara berlangsung.</h6>
+                    <p></p>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-center">
+                        <div class="col">
+                            <img src="static/img/icon/ms.png" style="width: 200px; padding: 10px;">
+                            <p>Memakai Masker</p>
+                        </div>
+                        <div class="col">
+                            <img src="static/img/icon/hs.png" style="width: 200px; padding: 10px;">
+                            <p>Menggunakan Handsanitizer</p>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-center">
+                        <div class="col">
+                            <img src="static/img/icon/pd.png" style="width: 200px; padding: 10px;">
+                            <p>Menjaga Jarak</p>
+                        </div>
+                        <div class="col">
+                            <img src="static/img/icon/ct.png" style="width: 200px; padding: 10px;">
+                            <p>Mencuci Tangan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center align-middle container scrollable-half">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="static/img/img.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Nama</h1>
+                                <p>Pesan</p>
+                            </div>
+                        </div>
+                        <div id="holder" class="carousel-inner">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div> -->
+                    <div id="carousel">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="py-5 text-center align-middle container">
+        <div class="row py-lg-5">
+            <footer class="pt-5 my-5 text-muted border-top">
+                Made with &#128153; in Riung Bandung &middot; &copy; 2021
+            </footer>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="static/js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="db.js"></script>
+    <script src="jquery.js"></script>
+</body>
+
+</html>

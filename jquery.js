@@ -25,7 +25,7 @@ function GetURLParameter(sParam) {
         var sParameterName = sURLVariables[i].split('=');
         console.log(sParameterName);
         if (sParameterName[0] == sParam) {
-            return sParameterName[1].replace("/+/g"," ");
+            return sParameterName[1].replaceAll("+"," ");
         }
     }
 }

@@ -23,9 +23,9 @@ function GetURLParameter(sParam) {
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++)  {
         var sParameterName = sURLVariables[i].split('=');
-        sParameterName = sParameterName.replace("+"," ");
+        console.log(sParameterName);
         if (sParameterName[0] == sParam) {
-            return sParameterName[1];
+            return sParameterName[1].replace("+"," ");
         }
     }
 }

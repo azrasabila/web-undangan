@@ -50,7 +50,7 @@ async function loadData() {
             <div class="card" style="width: 100%;">
                 <div class="card-body">
                     <p class="card-text">${item.Pesan}</p>
-                    <p class="card-text">- <i>${item.Nama}</i></p>
+                    <p class="card-text">- <i>${item.Nama}</i> <span class="badge bg-warning text-dark">${item.Konfirmasi}</span></p>
                 </div>
             </div>` 
         })
@@ -79,13 +79,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("waktu").innerHTML = days + " Hari ";
+  document.getElementById("waktu").innerHTML = days + "<br> Hari ";
 
-  document.getElementById("jam").innerHTML = hours + " jam ";
+  document.getElementById("jam").innerHTML = hours + "<br> jam ";
 
-  document.getElementById("menit").innerHTML = minutes + " menit ";
+  document.getElementById("menit").innerHTML = minutes + "<br> menit ";
 
-  document.getElementById("detik").innerHTML = seconds + " detik ";
+  document.getElementById("detik").innerHTML = seconds + "<br> detik ";
 
   // If the count down is finished, write some text
   if (distance < 0) {

@@ -60,7 +60,7 @@ nav {
     min-height: 95vh; /* or any value */
     background-color: #FFF1E1;
     margin-bottom: 25px;
-    align-items: center !important;
+    align-items: flex-start !important;
     /* text-align: center;
     // display: flex;
     // justify-content: center;
@@ -71,7 +71,7 @@ nav {
 .landing {
     min-height: 95vh; /* or any value */
     background-color: #FFF1E1;
-    background-image: url("static/img/prewed/HWS01596.JPG");
+    background-image: url("static/img/prewed/HWS01596-min.JPG");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -88,7 +88,7 @@ nav {
     background-color: #FFF1E1;
     margin-bottom: 25px;
     border-radius: 2rem;
-    align-items: center !important;
+    align-items: flex-start !important;
     /* text-align: center;
     // display: flex;
     // justify-content: center;

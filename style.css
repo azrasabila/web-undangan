@@ -60,7 +60,7 @@ nav {
     min-height: 95vh; /* or any value */
     background-color: #FFF1E1;
     margin-bottom: 25px;
-    align-items: center;
+    align-items: center !important;
     /* text-align: center;
     // display: flex;
     // justify-content: center;
@@ -88,7 +88,7 @@ nav {
     background-color: #FFF1E1;
     margin-bottom: 25px;
     border-radius: 2rem;
-    align-items: center;
+    align-items: center !important;
     /* text-align: center;
     // display: flex;
     // justify-content: center;

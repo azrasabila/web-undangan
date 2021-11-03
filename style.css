@@ -56,15 +56,19 @@ nav {
     overflow-y: auto;
 }
 
-/* .rounded-pill {
-    padding: 1rem;
-} */
+.video {
+    width: 100%;
+}
+
+.stretch {
+    display: flex;
+    align-items: flex-start;
+}
 
 .scrollable {
     min-height: 95vh; /* or any value */
     background-color: #FFF1E1;
     margin-bottom: 25px;
-    align-items: flex-start !important;
     /* text-align: center;
     // display: flex;
     // justify-content: center;
@@ -92,7 +96,6 @@ nav {
     background-color: #FFF1E1;
     margin-bottom: 25px;
     border-radius: 2rem;
-    align-items: flex-start !important;
     /* text-align: center;
     // display: flex;
     // justify-content: center;

@@ -3,7 +3,6 @@ let played = true;
 function toggleMuteAudio(){
     played = !played;
     $("#bgm").prop("muted",!$("#bgm").prop("muted"));
-    console.log(played);
     played? $("#toggleMusik").attr("src", "static/img/icon/speaker-filled-audio-tool.png") : $("#toggleMusik").attr("src", "static/img/icon/no-sound.png");
 }
 
@@ -23,7 +22,6 @@ function GetURLParameter(sParam) {
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++)  {
         var sParameterName = sURLVariables[i].split('=');
-        console.log(sParameterName);
         if (sParameterName[0] == sParam) {
             return sParameterName[1].replaceAll("+"," ");
         }
@@ -92,12 +90,12 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("waktu").innerHTML = days + " IT'S ";
+    document.getElementById("waktu").innerHTML = " IT'S ";
 
-    document.getElementById("jam").innerHTML = hours + " THE ";
+    document.getElementById("jam").innerHTML = " THE ";
 
-    document.getElementById("menit").innerHTML = minutes + " DAY ";
+    document.getElementById("menit").innerHTML = " DAY ";
 
-    document.getElementById("detik").innerHTML = seconds + " !!! ";
+    document.getElementById("detik").innerHTML = " !!! ";
   }
 }, 1000);

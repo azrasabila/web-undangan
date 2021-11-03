@@ -56,6 +56,10 @@ nav {
     overflow-y: auto;
 }
 
+/* .rounded-pill {
+    padding: 1rem;
+} */
+
 .scrollable {
     min-height: 95vh; /* or any value */
     background-color: #FFF1E1;

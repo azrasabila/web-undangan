@@ -7,7 +7,10 @@ html {
 }
 
 body {
-    background-color: #FFE4C4;
+    /* background-color: #FFE4C4; */
+    background-image: url("static/img/art/3040791.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* img {
@@ -16,11 +19,15 @@ body {
 } */
 
 .pink {
-    background-color: #FFF1E1;
+    background-color: #DEC1B9;
 }
 
 .krem {
-    background-color: #FFE4C4;
+    background-color: #B9CFCC;
+}
+
+.biru {
+    background-color: #A6DADE;
 }
 
 .video {
@@ -79,16 +86,17 @@ nav {
 .landing {
     min-height: 95vh; /* or any value */
     background-color: #FFF1E1;
-    background-image: url("static/img/prewed/HWS01596-min.JPG");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("static/img/prewed/HWS01596-min.JPG");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    font-family: fantasy;
+    /* filter: brightness(80%); */
     margin-bottom: 1rem;
 }
 
 .header-text {
-    margin-top: 10rem;
+    margin-top: 8rem;
+    font-size: 4rem;
 }
 
 .scrollable-half {
@@ -103,12 +111,35 @@ nav {
     //overflow-y: auto; */
 }
 
-/* .container {
-//     width: 100%;
-//     margin: 0;
-//     padding: 0;
-// } */
+@font-face {
+    font-family: 'Anastasia';
+    src: url('static/font/Anastasia.woff2') format('woff2'),
+         url('static/font/Anastasia.woff') format('woff'),
+         url('static/font/Anastasia.ttf') format('truetype');
+}
 
-.carousel {
-    width: 80%;
+.font-anastasia {
+    font-family: 'Anastasia';
+}
+
+@font-face {
+    font-family: 'Hellobaby';
+    src: url('static/font/Hellobaby.woff2') format('woff2'),
+         url('static/font/Hellobaby.woff') format('woff'),
+         url('static/font/Hellobaby.ttf') format('truetype');
+}
+
+.font-hellobaby {
+    font-family: 'Hellobaby';
+}
+
+@font-face {
+    font-family: 'KitchenHome';
+    src: url('static/font/KitchenHome.woff2') format('woff2'),
+         url('static/font/KitchenHome.woff') format('woff'),
+         url('static/font/KitchenHome.ttf') format('truetype');
+}
+
+.font-kitchenhome {
+    font-family: 'KitchenHome';
 }

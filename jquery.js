@@ -29,9 +29,10 @@ function GetURLParameter(sParam) {
 }
 let to = GetURLParameter('to');
 
-//to = to.replace("+"," ");
+let sesi = GetURLParameter('sesi');
 
 document.getElementById("diundang").innerHTML = to == undefined ? "Tamu Terhormat" : to;
+document.getElementById("sesi").innerHTML = sesi == undefined ? "1 (10.30 - 11.30)" : sesi == "1" ? "1 (10.30 - 11.30)" : sesi == "2" ? "2 (11.30 - 12.30)" : "3 (12.30 - 13.30)";
 
 //carousel
 

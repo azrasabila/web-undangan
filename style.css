@@ -7,10 +7,8 @@ html {
 }
 
 body {
-    /* background-color: #FFE4C4; */
-    background-image: url("static/img/art/3040791.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    font-family:'Times New Roman', Times, serif;
+    color: #827C79;
 }
 
 /* img {
@@ -19,7 +17,7 @@ body {
 } */
 
 .pink {
-    background-color: #DEC1B9;
+    background-color: #DEB8A7;
 }
 
 .krem {
@@ -47,6 +45,18 @@ body {
 
 #diundang {
     margin: 1rem;
+}
+
+.bg-gradasi {
+    background-image: url("static/img/art/bg\ bottom\ \(kirim\ pesan\ -\ protokol\)-04.svg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.bg-top {
+    background-image: url("static/img/art/bg\ top\ with\ flower\ no\ photo\ \(beranda\ sd\ galeri\)-03.svg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
 }
 
 .card {
@@ -79,7 +89,7 @@ nav {
 .scrollable {
     min-height: 95vh; /* or any value */
     background-color: #FFF1E1;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     /* text-align: center;
     // display: flex;
     // justify-content: center;
@@ -95,7 +105,7 @@ nav {
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
     /* filter: brightness(80%); */
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .header-text {
@@ -105,9 +115,9 @@ nav {
 
 .scrollable-half {
     min-height: 45vh; /* or any value */
-    background-color: #FFF1E1;
-    margin-bottom: 25px;
-    border-radius: 2rem;
+    /* background-color: #DEB8A7; */
+    /* margin-bottom: 25px; */
+    /* border-radius: 2rem; */
     /* text-align: center;
     // display: flex;
     // justify-content: center;
@@ -124,6 +134,7 @@ nav {
 
 .font-anastasia {
     font-family: 'Anastasia';
+    color: #5A524F;
 }
 
 @font-face {
@@ -135,6 +146,7 @@ nav {
 
 .font-hellobaby {
     font-family: 'Hellobaby';
+    color: #5A524F;
 }
 
 @font-face {
@@ -146,4 +158,5 @@ nav {
 
 .font-kitchenhome {
     font-family: 'KitchenHome';
+    color: #5A524F;
 }

@@ -45,6 +45,10 @@ body {
     overflow-y: scroll;
 }
 
+#diundang {
+    margin: 1rem;
+}
+
 .card {
     background-color: #FFE4C4;
     margin-bottom: 1rem;

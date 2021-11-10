@@ -81,23 +81,23 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("waktu").innerHTML = days + "<br> Hari";
+  document.getElementById("waktu").innerHTML = days;
 
-  document.getElementById("jam").innerHTML = hours + "<br> jam";
+  document.getElementById("jam").innerHTML = hours;
 
-  document.getElementById("menit").innerHTML = minutes + "<br> menit";
+  document.getElementById("menit").innerHTML = minutes;
 
-  document.getElementById("detik").innerHTML = seconds + "<br> detik";
+  document.getElementById("detik").innerHTML = seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("waktu").innerHTML = " IT'S ";
+    document.getElementById("waktu").innerHTML = "D";
 
-    document.getElementById("jam").innerHTML = " THE ";
+    document.getElementById("jam").innerHTML = "D";
 
-    document.getElementById("menit").innerHTML = " DAY ";
+    document.getElementById("menit").innerHTML = "A";
 
-    document.getElementById("detik").innerHTML = " !!! ";
+    document.getElementById("detik").innerHTML = "Y";
   }
 }, 1000);

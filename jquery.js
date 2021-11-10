@@ -52,7 +52,7 @@ async function loadData() {
             <div class="card" style="width: 100%;">
                 <div class="card-body">
                     <p class="card-text">${item.Pesan}</p>
-                    <p class="card-text">- <i>${item.Nama}</i> <span class="badge bg-warning text-dark">${item.Konfirmasi}</span></p>
+                    <p class="card-text">- <i>${item.Nama}</i> <span class="badge bg-warning">${item.Konfirmasi}</span></p>
                 </div>
             </div>` 
         })

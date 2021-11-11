@@ -69,15 +69,15 @@ body {
     .bg-gradasi {
         background-image: url("static/img/art/bg\ bottom\ \(kirim\ pesan\ -\ protokol\)-04-min.png");
         /* background-repeat: no-repeat; */
-        background-size: initial;
-        background-position: center; /* Center the image */
+        background-size: cover;
+        /* background-position: center; */
     }
     
     .bg-top {
         background-image: url("static/img/art/bg\ top\ no\ photo\ \(beranda\ sd\ galeri\)-03-min.png");
         /* background-repeat: no-repeat; */
-        background-size: initial;
-        background-position: center; /* Center the image */
+        background-size: cover;
+        /* background-position: center; */
     }
 
     .bunga {

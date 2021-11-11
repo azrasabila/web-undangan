@@ -1,21 +1,36 @@
-//kontrol musik
-let played = true;
+$(document).ready(function() {
+    $('#memberModal').modal('show');
+    //kontrol musik
+    let played = true;
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'static/sound/FKJ - Ylang Ylang.mp3');
+    audioElement.setAttribute('autoplay', 'autoplay');
+    //audioElement.load()
+    $.get();
+    audioElement.addEventListener("load", function() {
+    audioElement.play();
+    }, true);
+
+
+
+    $('#toggleMusik').click(function() {
+    played = !played;
+    if (played) {
+        audioElement.play();
+        $("#toggleMusik").attr("src", "static/img/icon/speaker-filled-audio-tool.png");
+    } else {
+        audioElement.pause();
+        $("#toggleMusik").attr("src", "static/img/icon/no-sound.png");
+    }
+    });
+});
+
 function toggleMuteAudio(){
     played = !played;
-    $("#bgm").prop("muted",!$("#bgm").prop("muted"));
+    played? audioElement.play() : audioElement.pause();
+    // $("#bgm").prop("muted",!$("#bgm").prop("muted"));
     played? $("#toggleMusik").attr("src", "static/img/icon/speaker-filled-audio-tool.png") : $("#toggleMusik").attr("src", "static/img/icon/no-sound.png");
 }
-
-// $('#myElementId').on('click', function(event){
-//     alert('CLICK');
-//     // do something else.
-//     event.preventDefault();
-// });
-
-$(document).ready(function () {
-    //popup nama
-    $('#memberModal').modal('show');
-});
 
 function GetURLParameter(sParam) {
     var sPageURL = window.location.search.substring(1);

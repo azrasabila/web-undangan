@@ -32,14 +32,6 @@ body {
     background-color: #DEB8A7;
 }
 
-.krem {
-    background-color: #B9CFCC;
-}
-
-.biru {
-    background-color: #A6DADE;
-}
-
 .video {
     max-width: 640px;
     max-height: 480px;
@@ -63,12 +55,14 @@ body {
     background-image: url("static/img/art/bg\ bottom\ with\ flower\ \(kirim\ pesan\ -\ protokol\)-04-min.png");
     /* background-repeat: no-repeat; */
     background-size: cover;
+    background-position: center; /* Center the image */
 }
 
 .bg-top {
     background-image: url("static/img/art/bg\ top\ with\ flower\ no\ photo\ \(beranda\ sd\ galeri\)-03-min.png");
     /* background-repeat: no-repeat; */
     background-size: cover;
+    background-position: center; /* Center the image */
 }
 
 @media only screen and (max-width: 768px) {
@@ -76,12 +70,14 @@ body {
         background-image: url("static/img/art/bg\ bottom\ \(kirim\ pesan\ -\ protokol\)-04-min.png");
         /* background-repeat: no-repeat; */
         background-size: initial;
+        background-position: center; /* Center the image */
     }
     
     .bg-top {
         background-image: url("static/img/art/bg\ top\ no\ photo\ \(beranda\ sd\ galeri\)-03-min.png");
         /* background-repeat: no-repeat; */
         background-size: initial;
+        background-position: center; /* Center the image */
     }
 
     .bunga {
@@ -106,7 +102,12 @@ body {
 
 nav {
     position: fixed;
-    background-color: #FFF1E1;
+    background-color: #f2f2f2;
+}
+
+.badag {
+    font-size: 6rem;
+    margin: 0 2rem;
 }
 
 .midd {

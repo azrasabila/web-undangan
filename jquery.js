@@ -1,17 +1,8 @@
+let played = true;
+var audioElement = document.createElement('audio');
+
 $(document).ready(function() {
     $('#memberModal').modal('show');
-    //kontrol musik
-    let played = true;
-    var audioElement = document.createElement('audio');
-    audioElement.setAttribute('src', 'static/sound/FKJ - Ylang Ylang.mp3');
-    audioElement.setAttribute('autoplay', 'autoplay');
-    //audioElement.load()
-    $.get();
-    audioElement.addEventListener("load", function() {
-    audioElement.play();
-    }, true);
-
-
 
     $('#toggleMusik').click(function() {
     played = !played;
@@ -24,6 +15,17 @@ $(document).ready(function() {
     }
     });
 });
+
+function playBGM() {
+    //kontrol musik
+    audioElement.setAttribute('src', 'static/sound/bgm.mp3');
+    audioElement.setAttribute('autoplay', 'autoplay');
+    //audioElement.load()
+    $.get();
+    audioElement.addEventListener("load", function() {
+    audioElement.play();
+    }, true);
+}
 
 function toggleMuteAudio(){
     played = !played;

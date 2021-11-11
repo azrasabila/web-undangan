@@ -91,6 +91,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.qr {
+    width: 100%;
+}
+
 .btn-warning, .btn-warning:hover {
     background-color: #DEB8A7;
     border-color: #DEB8A7;

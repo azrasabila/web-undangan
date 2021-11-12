@@ -97,7 +97,7 @@
                         <img class="closeup" src="static/img/prewed/mbayaya.jpg" onContextMenu="return false;">
                         <div class="d-flex flex-column justify-content-center">
                             <h1 class="font-hellobaby"><i>Khaza Allaya Rizqika</i></h1>
-                            <p class="text-muted"><br>Putri Bapak Sugeng Harijadi <br>dan Ibu Yuyun Tresnaningsih</p>
+                            <p class=""><br>Putri Bapak Sugeng Harijadi <br>dan Ibu Yuyun Tresnaningsih</p>
                         </div>
                     </div>
                     <h1 class="font-hellobaby"><br>&<br><br></h1>
@@ -105,7 +105,7 @@
                         <img class="closeup" src="static/img/prewed/rifa.jpg" onContextMenu="return false;">
                         <div class="d-flex flex-column justify-content-center">
                             <h1 class="font-hellobaby"><i>Rifa Dyanda</i><br></h1>
-                            <p class="text-muted"><br>Putra Bapak Herry Hudrasyah <br>dan Ibu Ima Fatima</p>
+                            <p class=""><br>Putra Bapak Herry Hudrasyah <br>dan Ibu Ima Fatima</p>
                         </div>
                     </div>
             </div>
@@ -123,7 +123,7 @@
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="font-anastasia"><br>Minggu, <i class="badag">5</i> Desember 2021<br><br></h1>
                     <h2 class="fw-light font-anastasia">Akad</h2>
-                    <p class="lead">08.30 - 09.30<br></p>
+                    <p class="lead">08.30 - 09.30 WIB<br></p>
                     <h2 class="fw-light font-anastasia">Resepsi</h2>
                     <p class="lead" id="session"></p><br>
                     <div class="d-flex flex-row justify-content-center">
@@ -166,7 +166,7 @@
             </div>
         </section>
         <section class="py-5 text-center align-middle container scrollable-half" id="galeri">
-            <div data-aos="zoom-in-up" data-aos-duration="1500" class="album row py-lg-5">
+            <div data-aos="zoom-in-up" data-aos-duration="1500" class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto container">
                     <div class="d-flex flex-row justify-content-center">
                         <img class="bunga" src="static/img/art/bunga header kiri.png">
@@ -174,22 +174,22 @@
                         <img class="bunga" src="static/img/art/bunga header kanan.png">
                     </div>
                 </div>
-                <div data-aos="fade-down" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch">
+                <div data-aos="fade-down" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch justify-content-center align-items-center">
                         <img src="static/img/prewed/HWS01306-min.JPG" onContextMenu="return false;">
                         <img src="static/img/prewed/HWS01659-min.JPG" onContextMenu="return false;">
                         <img src="static/img/prewed/HWS01310-min.JPG" onContextMenu="return false;">
                 </div>
-                <div data-aos="fade-right" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch">
+                <div data-aos="fade-right" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch justify-content-center align-items-center">
                     <img src="static/img/prewed/HWS01402-min.JPG" onContextMenu="return false;">
                     <img src="static/img/prewed/HWS01875-min.JPG" onContextMenu="return false;">
                     <img src="static/img/prewed/HWS01507-min.JPG" onContextMenu="return false;">
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch">
+                <div data-aos="fade-left" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch justify-content-center align-items-center">
                     <img src="static/img/prewed/HWS01979-min.JPG" onContextMenu="return false;">
                     <img src="static/img/prewed/HWS02126-min.JPG" onContextMenu="return false;">
                     <img src="static/img/prewed/HWS01970-min.JPG" onContextMenu="return false;">
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch">
+                <div data-aos="fade-up" data-aos-duration="1500" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 stretch justify-content-center align-items-center">
                     <img src="static/img/prewed/HWS01568-min.JPG" onContextMenu="return false;">
                     <img src="static/img/prewed/HWS01988-min.JPG" onContextMenu="return false;">
                     <img src="static/img/prewed/HWS01596-min.JPG" onContextMenu="return false;">
@@ -240,12 +240,23 @@
                         </div>
                         <div class="form-floating mb-3">
                             <select class="form-select" aria-label="Default select example" id="selectKehadiran">
-                                <option selected value="Hadir">Hadir</option>
-                                <option value="Tidak Hadir">Tidak Hadir</option>
-                                <option value="Belum Tahu">Belum Tahu</option>
+                                <option selected value="Hadir" id="hadir">Hadir</option>
+                                <option value="Tidak Hadir" id="tidakHadir">Tidak Hadir</option>
+                                <!-- <option value="Belum Tahu">Belum Tahu</option> -->
                             </select>
                             <label for="floatingInput">Konfirmasi Kehadiran</label>
                             <div id="jumlahHelp" class="form-text">Untuk kami memperkirakan jumlah tamu yang akan hadir
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" aria-label="Default select example" id="selectJumlahTamu">
+                                <option selected value=1>1</option>
+                                <option value=2>2</option>
+                                <!-- <option value=3>3</option> -->
+                                <option value=0 hidden>0</option>
+                            </select>
+                            <label for="floatingInput">Jumlah Hadir</label>
+                            <div id="jumlahHelp" class="form-text">Pilih jumlah tamu yang akan hadir
                             </div>
                         </div>
                         <div class="form-floating mb-3">

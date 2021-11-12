@@ -2,6 +2,10 @@ let played = true;
 var audioElement = document.createElement('audio');
 
 $(document).ready(function() {
+    $("#selectKehadiran").val("Hadir");
+    $("#selectJumlahTamu").val(1);
+    let hadir = $("#selectKehadiran").val();
+
     $('#memberModal').modal('show');
 
     $('#toggleMusik').click(function() {
@@ -13,7 +17,21 @@ $(document).ready(function() {
         audioElement.pause();
         $("#toggleMusik").attr("src", "static/img/icon/no-sound.png");
     }
+    }); 
+
+    $('#tidakHadir').click(function() {
+        $("#selectJumlahTamu").attr("disabled", true);
+        $("#selectJumlahTamu").val(0);
     });
+
+    $('#hadir').click(function() {
+        $("#selectJumlahTamu").removeAttr("disabled");
+        $("#selectJumlahTamu").val(1);
+    });
+
+    if (hadir == "Tidak Hadir") {
+    } else {
+    }   
 });
 
 function playBGM() {
@@ -49,8 +67,8 @@ let to = GetURLParameter('to');
 let sesi = GetURLParameter('sesi');
 
 document.getElementById("diundang").innerHTML = to == undefined ? "Tamu Terhormat" : to;
-document.getElementById("sesi").innerHTML = sesi == undefined ? "Sesi 1 (10.30 - 11.30)" : sesi == "1" ? "Sesi 1 (10.30 - 11.30)" : sesi == "2" ? "Sesi 2 (11.30 - 12.30)" : "Sesi 3 (12.30 - 13.30)";
-document.getElementById("session").innerHTML = sesi == undefined ? "10.30 - 11.30 (Sesi 1)" : sesi == "1" ? "10.30 - 11.30 (Sesi 1)" : sesi == "2" ? "11.30 - 12.30 (Sesi 2)" : "12.30 - 13.30 (Sesi 3)";
+document.getElementById("sesi").innerHTML = sesi == undefined ? "Sesi 1 (10.30 - 11.30 WIB)" : sesi == "1" ? "Sesi 1 (10.30 - 11.30 WIB)" : sesi == "2" ? "Sesi 2 (11.30 - 12.30 WIB)" : "Sesi 3 (12.30 - 13.30 WIB)";
+document.getElementById("session").innerHTML = sesi == undefined ? "10.30 - 11.30 WIB (Sesi 1)" : sesi == "1" ? "10.30 - 11.30 WIB (Sesi 1)" : sesi == "2" ? "11.30 - 12.30 WIB (Sesi 2)" : "12.30 - 13.30 WIB (Sesi 3)";
 
 //carousel
 

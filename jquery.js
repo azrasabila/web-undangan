@@ -57,7 +57,7 @@ document.getElementById("session").innerHTML = sesi == undefined ? "10.30 - 11.3
 async function loadData() {
     const { data: Ucapan, error } = await supabased
     .from('Ucapan')
-    .select('*')
+    .select('*').neq('Pesan', "");
 
     if(!error) {
         //loop display data here

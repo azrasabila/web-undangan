@@ -51,6 +51,11 @@ body {
     margin: 1rem;
 }
 
+.closeup {
+    width: 10rem;
+    border-radius: 50%;
+}
+
 .bg-gradasi {
     background-image: url("static/img/art/bg\ bottom\ with\ flower\ \(kirim\ pesan\ -\ protokol\)-04-min.png");
     /* background-repeat: no-repeat; */
@@ -83,6 +88,10 @@ body {
     .bunga {
         height: 3rem;
         width: 3rem;
+    }
+
+    .closeup {
+        margin-bottom: 1rem;
     }
   }
 

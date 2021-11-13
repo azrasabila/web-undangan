@@ -4,7 +4,7 @@ var audioElement = document.createElement('audio');
 $(document).ready(function() {
     $("#selectKehadiran").val("Hadir");
     $("#selectJumlahTamu").val(1);
-    let hadir = $("#selectKehadiran").val();
+    // let hadir = $("#selectKehadiran").val();
 
     $('#memberModal').modal('show');
 
@@ -19,19 +19,16 @@ $(document).ready(function() {
     }
     }); 
 
-    $('#tidakHadir').click(function() {
-        $("#selectJumlahTamu").attr("disabled", true);
-        $("#selectJumlahTamu").val(0);
-    });
-
-    $('#hadir').click(function() {
-        $("#selectJumlahTamu").removeAttr("disabled");
-        $("#selectJumlahTamu").val(1);
-    });
-
-    if (hadir == "Tidak Hadir") {
-    } else {
-    }   
+    $('#selectKehadiran').change(function(){
+        var hadir= $(this).val();
+        if (hadir == "Tidak Hadir") {
+            $("#selectJumlahTamu").attr("disabled", true);
+            $("#selectJumlahTamu").val(0);
+        } else {
+            $("#selectJumlahTamu").removeAttr("disabled");
+            $("#selectJumlahTamu").val(1);
+        }             
+      }); 
 });
 
 function playBGM() {

@@ -1,3 +1,69 @@
+const supabaseUrl = 'https://xjvnkrkdlhvirzmqbxyg.supabase.co'
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMTI1NTU1OCwiZXhwIjoxOTQ2ODMxNTU4fQ._PYJBQGFyyLdlXUFARvwrcOCmlBLVgckSON05pxezS0'
+const supabased = supabase.createClient(supabaseUrl, SUPABASE_KEY)
+
+const nama = document.getElementById('floatingInput')
+const form = document.forms['submit-pesan']
+const pesan = document.getElementById('floatingTextarea')
+// const konfirmasi = document.getElementById('selectKehadiran')
+// const jumlah = document.getElementById('selectJumlahTamu')
+const btnKirim = document.querySelector('.btn-kirim')
+const btnLoading = document.querySelector('.btn-loading')
+const alertBerhasil = document.querySelector('.alert-berhasil')
+const alertGagal = document.querySelector('.alert-gagal')
+
+form.addEventListener('submit', e => {
+        e.preventDefault()
+        btnLoading.classList.toggle('d-none')
+        btnKirim.classList.toggle('d-none')
+        supabased
+        .from('Ucapan')
+          .insert([
+            { Nama: nama.value, 
+                Pesan: pesan.value, 
+                Konfirmasi: "Tidak Hadir (announcement)", 
+                Jumlah: 0 
+            }
+        ]).then(response => {
+            console.log('Success!')
+            btnLoading.classList.toggle('d-none')
+            btnKirim.classList.toggle('d-none')
+            alertBerhasil.classList.toggle('d-none')
+            form.reset()
+        })
+        .catch(error => {
+            console.error('Error!', error)
+            alertGagal.classList.toggle('d-none')
+        })            
+    })
+
+//carousel
+
+async function loadData() {
+    const { data: Ucapan, error } = await supabased
+    .from('Ucapan')
+    .select('*').neq('Pesan', "");
+
+    if(!error) {
+        //loop display data here
+        const parent = document.getElementById('carousel')
+
+        let contents = ''
+        Ucapan.forEach(function(item){
+            contents += `
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <p class="card-text">${item.Pesan}</p>
+                    <p class="card-text">- <i>${item.Nama}</i> <span class="badge bg-warning">${item.Konfirmasi}</span></p>
+                </div>
+            </div>` 
+        })
+
+        parent.insertAdjacentHTML('beforeend', contents)
+    }
+}
+loadData()
+
 let played = true;
 var audioElement = document.createElement('audio');
 
@@ -59,40 +125,6 @@ function GetURLParameter(sParam) {
         }
     }
 }
-// let to = GetURLParameter('to');
-
-// let sesi = GetURLParameter('sesi');
-
-// document.getElementById("diundang").innerHTML = to == undefined ? "Tamu Terhormat" : to;
-// document.getElementById("sesi").innerHTML = sesi == undefined ? "Sesi 1 (10.30 - 11.30 WIB)" : sesi == "1" ? "Sesi 1 (10.30 - 11.30 WIB)" : sesi == "2" ? "Sesi 2 (11.30 - 12.30 WIB)" : "Sesi 3 (12.30 - 13.30 WIB)";
-// document.getElementById("session").innerHTML = sesi == undefined ? "10.30 - 11.30 WIB (Sesi 1)" : sesi == "1" ? "10.30 - 11.30 WIB (Sesi 1)" : sesi == "2" ? "11.30 - 12.30 WIB (Sesi 2)" : "12.30 - 13.30 WIB (Sesi 3)";
-
-//carousel
-
-// async function loadData() {
-//     const { data: Ucapan, error } = await supabased
-//     .from('Ucapan')
-//     .select('*').neq('Pesan', "");
-
-//     if(!error) {
-//         //loop display data here
-//         const parent = document.getElementById('carousel')
-
-//         let contents = ''
-//         Ucapan.forEach(function(item){
-//             contents += `
-//             <div class="card" style="width: 100%;">
-//                 <div class="card-body">
-//                     <p class="card-text">${item.Pesan}</p>
-//                     <p class="card-text">- <i>${item.Nama}</i> <span class="badge bg-warning">${item.Konfirmasi}</span></p>
-//                 </div>
-//             </div>` 
-//         })
-
-//         parent.insertAdjacentHTML('beforeend', contents)
-//     }
-// }
-// loadData()
 
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 5, 2021 8:30:00").getTime();
